@@ -1,7 +1,6 @@
 {
   "name": "simple-timewriter",
   "version": "0.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "m.test"
@@ -28,5 +27,9 @@
       "test",
       "beforeEach"
     ]
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
 }
