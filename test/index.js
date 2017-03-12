@@ -20,7 +20,7 @@ const simpleTypewriter = require('..')
 const interval = 100
 
 test('simple-typewriter', () => {
-  test.skip('sets `innerHTML` attribute', done => {
+  test('sets `innerHTML` attribute', done => {
     const element = { innerHTML: '' }
     const stop = simpleTypewriter('test', element, {interval})
 
@@ -33,7 +33,7 @@ test('simple-typewriter', () => {
     setTimeout(() => done(), step())
   })
 
-  test.skip('next-text options', done => {
+  test('next-text options', done => {
     const element = { innerHTML: '' }
     const stop = simpleTypewriter('test', element, {interval, nextText: {restart: true}})
 

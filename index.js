@@ -1,25 +1,25 @@
 var nextText = require('next-text')
+var simplestTimer = require('simplest-timer')
 
 module.exports = function simpleTypewriter (text, element, options) {
   options = options || {interval: 1000, nextText: {}}
-  var state = {}
-  return nextPlaceholderFor(element, text, options, state)
+  return nextPlaceholderFor(element, text, options, simplestTimer())
 }
 
-function nextPlaceholderFor (element, text, options, state) {
+function nextPlaceholderFor (element, text, options, timer) {
   var nextTextOptions = options.nextText || {}
   var isInputElement = element.constructor.name === 'HTMLInputElement'
   var currentPlaceholder = isInputElement ? element.getAttribute('placeholder') : element.innerHTML
   var nextPlaceholder = nextText(text, nextTextOptions, currentPlaceholder).next()
 
-  state.timer = setTimeout(function () {
+  timer.timeout(function () {
     if (isInputElement) {
       element.setAttribute('placeholder', nextPlaceholder.toString())
     } else {
       element.innerHTML = nextPlaceholder.toString()
     }
-    nextPlaceholderFor(element, text, options, state)
+    nextPlaceholderFor(element, text, options, timer)
   }, options.interval)
 
-  return function () { return clearTimeout(state.timer) }
+  return function () { return timer.stop() }
 }

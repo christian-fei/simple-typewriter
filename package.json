@@ -20,7 +20,8 @@
     "m.test": "0.0.53"
   },
   "dependencies": {
-    "next-text": "^1.0.3"
+    "next-text": "^1.0.3",
+    "simplest-timer": "^1.0.0"
   },
   "standard": {
     "globals": [
