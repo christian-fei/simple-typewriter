@@ -1,21 +1,21 @@
 {
-  "name": "simple-timewriter",
-  "version": "0.0.0",
+  "name": "simple-typewriter",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
     "test": "m.test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christian-fei/simple-timewriter.git"
+    "url": "git+https://github.com/christian-fei/simple-typewriter.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/christian-fei/simple-timewriter/issues"
+    "url": "https://github.com/christian-fei/simple-typewriter/issues"
   },
-  "homepage": "https://github.com/christian-fei/simple-timewriter#readme",
+  "homepage": "https://github.com/christian-fei/simple-typewriter#readme",
   "devDependencies": {
     "m.test": "0.0.53"
   },
